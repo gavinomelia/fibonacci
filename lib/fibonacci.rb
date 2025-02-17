@@ -1,7 +1,6 @@
 class Fibonacci
   def iterative_fibs(length)
-    a = 0
-    b = 1
+    a, b = 0, 1
     sequence = []
 
     length.times do
@@ -15,7 +14,7 @@ class Fibonacci
   def recursive_fibs(length, a = 0, b = 1, sequence = [])
     return sequence if sequence.length == length
 
-    sequence <<= a
+    sequence << a
     recursive_fibs(length, b, a + b, sequence)
   end
 end
